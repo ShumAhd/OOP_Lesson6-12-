@@ -4,6 +4,7 @@ import java.util.List;
 // Single responsibility principle	
 // Принцип единственной ответственности
 // У класса есть предназначение
+// https://youtu.be/GIIPo509Vpk?t=785
 
 public class Ex001_2SRP {
     public static void main(String[] args) {

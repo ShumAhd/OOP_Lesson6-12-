@@ -2,6 +2,7 @@
 // Open-closed principle
 // Принцип открытости/закрытости
 // Можно улучшать, но нельзя изменять
+//https://youtu.be/GIIPo509Vpk?t=1190
 public class Ex002_1OCP {
     public static void main(String[] args) {
         System.out.println(new Client(1).getDiscount(100));
