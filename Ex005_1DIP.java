@@ -1,8 +1,8 @@
 
 public class Ex005_1DIP {
     public static void main(String[] args) {
-        Book book = new Book();
-        book.viewAuthor();
+        Book book = new Book(); //имеется книга
+        book.viewAuthor(); //нужно посмотреть кто является автором книги
 
     }
 }
@@ -11,7 +11,7 @@ interface View {
     void print(String text);
 }
 
-class ConsoleView implements View {
+class ConsoleView implements View { //класс который будет что то показывать
     public void print(String text) {
         String result = String.format("ConsoleView %s", text);
         System.out.println(result);
@@ -26,12 +26,12 @@ class WinFormView implements View {
 }
 
 class Book {
-    View view;
+    View view; //содержит экземпляр view
 
     int indexPage;
 
-    public Book() {
-        this.view = new ConsoleView();
+    public Book() { //инициализация происходит на уровне конструктора
+        this.view = new ConsoleView(); //если завтра перестанет существовать ConsoleView, то перестанет существовать вся логика, что делать?
         indexPage = 1;
     }
 

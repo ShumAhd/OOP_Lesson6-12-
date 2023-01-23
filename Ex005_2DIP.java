@@ -11,11 +11,11 @@ public class Ex005_2DIP {
     }
 }
 
-interface ViewDIP {
+interface ViewDIP { //один
     void print(String text);
 }
 
-class ConsoleViewDIP implements ViewDIP {
+class ConsoleViewDIP implements ViewDIP { //второй
     public void print(String text) {
         String result = String.format("ConsoleViewDIP %s", text);
         System.out.println(result);
@@ -34,7 +34,7 @@ class BookDIP {
 
     public void setView(ViewDIP view) {
         this.view = view;
-    }
+    } //пусть в качестве конструктора передаётся один конкретный представитель.
 
     int indexPage;
 
