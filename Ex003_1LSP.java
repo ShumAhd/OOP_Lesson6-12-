@@ -1,3 +1,4 @@
+//https://youtu.be/GIIPo509Vpk?t=1410
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -9,8 +10,8 @@ import java.util.List;
 public class Ex003_1LSP {
     public static void main(String[] args) throws Exception {
         List<Animal> list = 
-        new ArrayList<>(Arrays.asList(new Cat(), new Fish() ));
-        for (var animal : list) {
+        new ArrayList<>(Arrays.asList(new Cat(), new Fish() )); // закидываем котика и рыбку в лист
+        for (var animal : list) { // хотим пробежатся по типу и по количеству лап
             System.out.println(animal.getType());
             System.out.println(animal.getLegsCount());
         }
@@ -20,14 +21,14 @@ public class Ex003_1LSP {
 abstract class Animal {
     public String getType() {
         return "Зверушка";
-    }
+    } // какое то животное
 
-    public int getLegsCount() throws Exception {
+    public int getLegsCount() throws Exception { // количество лап
         return 0;
     }
 }
 
-class Cat extends Animal {
+class Cat extends Animal { //простраиваем иерархию
 
     @Override
     public String getType() {
@@ -45,7 +46,7 @@ class Fish extends Animal
      @Override
      public String getType() {
         return "Рыбка";
-     }
+     } // а если у рыбки нет лапок?
      public int getLegsCount() throws Exception {
         throw new Exception("я же рыбка...");
      }

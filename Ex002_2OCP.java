@@ -3,10 +3,11 @@
 public class Ex002_2OCP {
 
     public static void main(String[] args) {
-        System.out.println("Цена продукта " + 100);
-        System.out.println("Цена для обычного клиента " + new BaseClient().getDiscount(100));
-        System.out.println("Цена для серебренного клиента " + new SilverPartner().getDiscount(100));
-        System.out.println("Цена для ВИП клиента " + new VIPPartner().getDiscount(100));
+        double price = 100;
+        System.out.println("Цена продукта " + price);
+        System.out.println("Цена для обычного клиента " + new BaseClient().getDiscount(price));
+        System.out.println("Цена для серебренного клиента " + new SilverPartner().getDiscount(price));
+        System.out.println("Цена для ВИП клиента " + new VIPPartner().getDiscount(price));
     }
 }
     class BaseClient{

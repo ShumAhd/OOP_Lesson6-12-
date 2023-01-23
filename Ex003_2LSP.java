@@ -15,7 +15,7 @@ public class Ex003_2LSP {
             System.out.println(animal.getType());
         }
 
-        List<Legs> list2 = new ArrayList<>(Arrays.asList(new Dog()/* , new Python() */));
+        List<Legs> list2 = new ArrayList<>(Arrays.asList(new Dog() /*, new Python() */)); //в этом случае коммпелятор не даст вставить питона
         for (var animal : list2) {
             System.out.println(animal.getLegsCount());
 
@@ -26,14 +26,14 @@ public class Ex003_2LSP {
 abstract class AbstractAnimal {
     public String getType() {
         return "Зверушка";
-    }
+    } //узнаём только тип этого самого животного, потому что животное точно имеет своё наименование
 }
 
-interface Legs {
+interface Legs { //отдельный интерфейс лапки
     int getLegsCount();
 }
 
-class Dog extends AbstractAnimal implements Legs {
+class Dog extends AbstractAnimal implements Legs { //класс собака наследник зверушек, инплементированы лапки
 
     @Override
     public String getType() {
@@ -46,7 +46,7 @@ class Dog extends AbstractAnimal implements Legs {
     }
 }
 
-class Python extends AbstractAnimal {
+class Python extends AbstractAnimal { //для питона имплементация лапок уже не нужна
     @Override
     public String getType() {
         return "питончик";
