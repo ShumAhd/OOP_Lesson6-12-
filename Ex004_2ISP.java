@@ -15,7 +15,7 @@ interface BasePhone {
     void SendSMS();
 }
 
-interface Fax {
+interface Fax { //имеется отдельный интерфейс факс
     void SendFax();
 
 }

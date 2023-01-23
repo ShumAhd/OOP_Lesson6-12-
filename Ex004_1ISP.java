@@ -68,7 +68,7 @@ class Nokia3310 implements Phone {
     }
 
     @Override
-    public void SendFax() {
+    public void SendFax() { //имеется кнопка, но факс телефон отрпавлять не умеет.
         // TODO Auto-generated method stub
         
     }
